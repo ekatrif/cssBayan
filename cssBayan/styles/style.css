@@ -442,6 +442,8 @@ body {
   margin-top: 32px;
 
   transform: translate(-6px, 0);
+
+  opacity:0;
 }
 
 .bayan__item i:before, .bayan__item i:after {
@@ -472,18 +474,24 @@ body {
   opacity: 0;
   cursor: pointer;
 }
-.bayan__item  input[type=radio]:not(:checked) ~ h2 {
+
+.bayan__item:not(:hover)  input[type=radio]:not(:checked) ~ h2 {
   color: #000;
 }
 
-.bayan__item  input[type=radio]:not(:checked) ~ img {
+.bayan__item:not(:hover)  input[type=radio]:not(:checked) ~ img {
   height: 0;
   opacity: 0;
 }
 
-.bayan__item input[type=radio]:not(:checked) ~ i:before {
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:before {
   transform: translate(2px, 0) rotate(45deg);
 }
-.bayan__item input[type=radio]:not(:checked) ~ i:after {
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
 }
+
+.bayan__list:hover i {
+  opacity:1;
+}
+
