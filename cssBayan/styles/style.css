@@ -372,12 +372,14 @@ body {
   width:320px;
   margin: 0 auto;
   padding: 10px;
-  /* background-color: #FFFACD; */
 }
 
 .h1 {
-  text-align: center;
   margin-bottom:30px;
+
+  text-align: center;
+  
+  font-size: 24px;
 }
 
 .bayan__list {
@@ -415,6 +417,10 @@ body {
   line-height: 2;
   font-weight: 300;
   text-align: left;
+
+  opacity:1;
+
+  transition: all 0.7s linear;
 }
 
 .bayan__item img {
@@ -429,6 +435,10 @@ body {
   height:auto;
 
   overflow: hidden;
+
+  opacity:1;
+
+  transition: all 0.7s linear;
 }
 
 .bayan__item + .bayan__item {
@@ -443,7 +453,9 @@ body {
 
   transform: translate(-6px, 0);
 
-  opacity:0;
+  opacity:1;
+
+  transition: all 0.7s linear;
 }
 
 .bayan__item i:before, .bayan__item i:after {
@@ -475,23 +487,152 @@ body {
   cursor: pointer;
 }
 
-.bayan__item:not(:hover)  input[type=radio]:not(:checked) ~ h2 {
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ h2 {
   color: #000;
+  transition: all 0.7s linear;
 }
 
-.bayan__item:not(:hover)  input[type=radio]:not(:checked) ~ img {
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ img {
   height: 0;
   opacity: 0;
+  transition: all 0.7s linear;
 }
 
 .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:before {
   transform: translate(2px, 0) rotate(45deg);
+  transition: all 0.7s linear;
 }
 .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
+  transition: all 0.7s linear;
 }
 
-.bayan__list:hover i {
-  opacity:1;
+/* .bayan__list:not(:hover) ~ h2 {
+  color: #000;
+  transition: all 0.7s linear;
+} */
+
+@media screen and (min-width:820px) {
+  .wrapper {
+    width:820px;
+    padding: 40px;
+  }
+
+  .h1 {
+    margin-bottom:40px;    
+    font-size: 26px;
+  }
+
+  .bayan__item h2 {
+    padding: 20px 20px 0;
+  
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .bayan__item img {
+    margin-top: 20px;
+    margin-bottom: 35px;
+  
+    width:700px;
+  }
+
+  .bayan__item + .bayan__item {
+    margin-top: 25px;
+  }
+
+  .bayan__list i {
+    opacity:0;
+  }
+  
+  .bayan__item i {
+    right: 35px;
+  
+    margin-top: 34px;
+  
+    transform: translate(-6px, 0);
+  }
+  
+  .bayan__item i:before, .bayan__item i:after {
+    width: 5px;
+    height: 14px;
+  }
+  .bayan__item i:before {
+    transform: translate(-4px, 0) rotate(45deg);
+  }
+  
+  .bayan__item i:after {
+    transform: translate(4px, 0) rotate(-45deg);
+  }
+  .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:before {
+    transform: translate(4px, 0) rotate(45deg);
+  }
+  .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:after {
+    transform: translate(-4px, 0) rotate(-45deg);
+  }
+
+  .bayan__list:hover i,
+  .bayan__list:hover i::before,
+  .bayan__list:hover i::after {
+    opacity:1;
+    transition: all 0.7s linear;
 }
+}
+
+@media screen and (min-width:1920px) {
+  .wrapper {
+    width:1900px;
+    padding: 40px;
+  }
+
+  .h1 {
+    margin-bottom:60px;    
+    font-size: 42px;
+  }
+
+  .bayan__item h2 {
+    padding: 30px 30px 0;
+  
+    font-size: 40px;
+    font-weight: 400;
+  }
+
+  .bayan__item img {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  
+    width:1500px;
+  }
+
+  .bayan__item + .bayan__item {
+    margin-top: 40px;
+  }
+  
+  .bayan__item i {
+    right: 50px;
+  
+    margin-top: 60px;
+  
+    transform: translate(-6px, 0);
+  }
+  
+  .bayan__item i:before, .bayan__item i:after {
+    width: 9px;
+    height: 27px;
+  }
+  .bayan__item i:before {
+    transform: translate(-6px, 0) rotate(45deg);
+  }
+  
+  .bayan__item i:after {
+    transform: translate(6px, 0) rotate(-45deg);
+  }
+  .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:before {
+    transform: translate(7px, 0) rotate(45deg);
+  }
+  .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:after {
+    transform: translate(-7px, 0) rotate(-45deg);
+  }
+}
+
 
