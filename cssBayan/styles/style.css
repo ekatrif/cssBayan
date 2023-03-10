@@ -267,7 +267,7 @@ textarea {
  * 2. Remove the padding in IE 10.
  */
 
-[type="checkbox"],
+[type="radio"],
 [type="radio"] {
   box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
@@ -462,7 +462,7 @@ body {
   transform: translate(2px, 0) rotate(-45deg);
 }
 
-.bayan__item input[type=checkbox] {
+.bayan__item input[type=radio] {
   position: absolute;
 
   width: 100%;
@@ -472,18 +472,18 @@ body {
   opacity: 0;
   cursor: pointer;
 }
-.bayan__item  input[type=checkbox]:checked ~ h2 {
+.bayan__item  input[type=radio]:not(:checked) ~ h2 {
   color: #000;
 }
 
-.bayan__item  input[type=checkbox]:checked ~ img {
+.bayan__item  input[type=radio]:not(:checked) ~ img {
   height: 0;
   opacity: 0;
 }
 
-.bayan__item input[type=checkbox]:checked ~ i:before {
+.bayan__item input[type=radio]:not(:checked) ~ i:before {
   transform: translate(2px, 0) rotate(45deg);
 }
-.bayan__item input[type=checkbox]:checked ~ i:after {
+.bayan__item input[type=radio]:not(:checked) ~ i:after {
   transform: translate(-2px, 0) rotate(-45deg);
 }
