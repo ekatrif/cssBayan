@@ -263,91 +263,6 @@ textarea {
 }
 
 /**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="radio"],
-[type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
-  display: block;
-}
-
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-  display: list-item;
-}
-
-/* Misc
-   ========================================================================== */
-
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
-  display: none;
-}
-
-/**
- * Add the correct display in IE 10.
- */
-
-[hidden] {
-  display: none;
-}
-
 /* Common styles */
 
 :root {
@@ -408,7 +323,7 @@ body {
   display:flex;
   flex-direction: column;
 
-  position: relative;
+  /* position: relative; */
 
   padding: 0;
   margin: 0;
@@ -416,7 +331,6 @@ body {
   overflow: hidden;
 
   background: #fff;
-
 }
 
 .bayan__item h2 {
@@ -437,7 +351,7 @@ body {
 }
 
 .bayan__item img {
-  position: relative;
+  /* position: relative; */
 
   align-self:center;
 
@@ -460,8 +374,8 @@ body {
 }
 
 .bayan__item i {
-  position: absolute;
-  right: 15px;
+  /* position: absolute; */
+  /* right: 15px; */
 
   margin-top: 32px;
 
@@ -474,7 +388,7 @@ body {
 
 .bayan__item i:before, .bayan__item i:after {
   content: "";
-  position: absolute;
+  /* position: absolute; */
 
   width: 3px;
   height: 9px;
@@ -490,34 +404,42 @@ body {
   transform: translate(2px, 0) rotate(-45deg);
 }
 
-.bayan__item input[type=radio] {
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
-
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
+.bayan__item label {
+  display: flex;
+  flex-direction: column;
 }
 
-.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ h2 {
+.bayan__item input[type=radio] {
+  /* position: absolute; */
+
+  /* width: 100%;
+  height: 100%; */
+
+  width:0;
+  height:0;
+
+  /* z-index: 1; */
+  opacity: 0;
+  /* cursor: pointer; */
+}
+
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ label > h2 {
   color: #000;
   transition: all 0.7s linear;
 }
 
-.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ img {
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ label > img {
   width: 0;
   opacity: 0;
   transition: all 0.7s linear;
 }
 
 
-.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:before {
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ label > i:before {
   transform: translate(2px, 0) rotate(45deg);
   transition: all 0.7s linear;
 }
-.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:after {
+.bayan__item:not(:hover) input[type=radio]:not(:checked) ~ label > i:after {
   transform: translate(-2px, 0) rotate(-45deg);
   transition: all 0.7s linear;
 }
@@ -540,6 +462,8 @@ body {
   
     font-size: 26px;
     font-weight: 400;
+
+    /* cursor:pointer; */
   }
 
   .bayan__item img {
@@ -590,7 +514,7 @@ body {
     transition: all 0.7s linear;
 }
 
-  .bayan__list:hover input[type=radio]:not(:checked) ~ h2 {
+  .bayan__list:hover input[type=radio]:not(:checked) ~ label > h2 {
     color: #cc071e;
     transition: all 0.7s linear;
   }
