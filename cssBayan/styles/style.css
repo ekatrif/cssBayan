@@ -441,6 +441,7 @@ body {
   transition: all 0.7s linear;
 }
 
+
 .bayan__item + .bayan__item {
   margin-top: 15px;
 }
@@ -493,10 +494,11 @@ body {
 }
 
 .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ img {
-  height: 0;
+  width: 0;
   opacity: 0;
   transition: all 0.7s linear;
 }
+
 
 .bayan__item:not(:hover) input[type=radio]:not(:checked) ~ i:before {
   transform: translate(2px, 0) rotate(45deg);
@@ -507,10 +509,7 @@ body {
   transition: all 0.7s linear;
 }
 
-/* .bayan__list:not(:hover) ~ h2 {
-  color: #000;
-  transition: all 0.7s linear;
-} */
+/* Adaptive styles */
 
 @media screen and (min-width:820px) {
   .wrapper {
@@ -520,13 +519,13 @@ body {
 
   .h1 {
     margin-bottom:40px;    
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .bayan__item h2 {
     padding: 20px 20px 0;
   
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 400;
   }
 
@@ -548,7 +547,7 @@ body {
   .bayan__item i {
     right: 35px;
   
-    margin-top: 34px;
+    margin-top: 36px;
   
     transform: translate(-6px, 0);
   }
@@ -577,6 +576,8 @@ body {
     opacity:1;
     transition: all 0.7s linear;
 }
+
+
 }
 
 @media screen and (min-width:1920px) {
