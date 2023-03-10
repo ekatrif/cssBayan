@@ -360,11 +360,24 @@ template {
   box-sizing: inherit;
 }
 
+/* Fonts */
+
+@font-face {
+  font-family: 'Golos Text';
+  src: url('../fonts/GolosText-Regular.woff') format('woff'),
+	   url('../fonts/GolosText-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Page styles */
+
 body {
   margin:0;
 
   color:#000;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Golos Text', sans-serif;
+  font-weight: normal;
   background-color: #FFFFE0;
 }
 
@@ -415,7 +428,7 @@ body {
 
   font-size: 22px;
   line-height: 2;
-  font-weight: 300;
+  font-weight: 400;
   text-align: left;
 
   opacity:1;
