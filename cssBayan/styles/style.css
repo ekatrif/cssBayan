@@ -480,3 +480,10 @@ body {
   height: 0;
   opacity: 0;
 }
+
+.bayan__item input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+.bayan__item input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
