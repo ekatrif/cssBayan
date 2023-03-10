@@ -439,7 +439,7 @@ body {
   position: absolute;
   right: 15px;
 
-  margin-top: 28px;
+  margin-top: 32px;
 
   transform: translate(-6px, 0);
 }
@@ -460,4 +460,23 @@ body {
 
 .bayan__item i:after {
   transform: translate(2px, 0) rotate(-45deg);
+}
+
+.bayan__item input[type=checkbox] {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+}
+.bayan__item  input[type=checkbox]:checked ~ h2 {
+  color: #000;
+}
+
+.bayan__item  input[type=checkbox]:checked ~ img {
+  height: 0;
+  opacity: 0;
 }
