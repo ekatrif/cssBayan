@@ -362,12 +362,102 @@ template {
 
 body {
   margin:0;
+
+  color:#000;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #FFFFE0;
 }
 
 .wrapper {
   width:320px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #FFFACD;
+  padding: 10px;
+  /* background-color: #FFFACD; */
+}
+
+.h1 {
+  text-align: center;
+  margin-bottom:30px;
+}
+
+.bayan__list {
+  display: flex;
+  flex-direction: column;
+
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+.bayan__item {
+  display:flex;
+  flex-direction: column;
+
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+
+  overflow: hidden;
+
+  background: #fff;
+
+}
+
+.bayan__item h2 {
+  display: block;
+  margin: 0;
+  padding: 15px 15px 0;
+
+  color: #cc071e;
+
+  font-size: 22px;
+  line-height: 2;
+  font-weight: 300;
+  text-align: left;
+}
+
+.bayan__item img {
+  position: relative;
+
+  align-self:center;
+
+  margin-top: 5px;
+  margin-bottom: 15px;
+
+  width:250px;
+  height:auto;
+
+  overflow: hidden;
+}
+
+.bayan__item + .bayan__item {
+  margin-top: 15px;
+}
+
+.bayan__item i {
+  position: absolute;
+  right: 15px;
+
+  margin-top: 28px;
+
+  transform: translate(-6px, 0);
+}
+
+.bayan__item i:before, .bayan__item i:after {
+  content: "";
+  position: absolute;
+
+  width: 3px;
+  height: 9px;
+
+  background-color: #cc071e;
+}
+
+.bayan__item i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+
+.bayan__item i:after {
+  transform: translate(2px, 0) rotate(-45deg);
 }
