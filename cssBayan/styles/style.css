@@ -160,22 +160,7 @@ input[type=radio]:not(:checked) ~ label .bayan__svg {
 
 /* Adaptive styles */
 
-@media screen and (min-width:820px) {
-  html {
-    font-size: 20px;
-  }
-
-  .wrapper {
-    min-width:820px;
-    max-width: 1500px;
-  }
-}
-
-@media screen and (min-width:1920px) {
-  html {
-    font-size: 30px;
-  }
-
+@media screen and (hover: hover) {
   .bayan__list:hover input[type=radio]:not(:checked) ~ label h2 {
     color: #cc071e;
     transition: all 0.7s linear;
@@ -195,6 +180,23 @@ input[type=radio]:not(:checked) ~ label .bayan__svg {
   .bayan__list:not(:hover) .bayan__svg {
     opacity:0;
     transition: all 0.7s linear;
+  }
+}
+
+@media screen and (min-width:820px) {
+  html {
+    font-size: 20px;
+  }
+
+  .wrapper {
+    min-width:820px;
+    max-width: 1500px;
+  }
+}
+
+@media screen and (min-width:1920px) {
+  html {
+    font-size: 30px;
   }
 }
 
