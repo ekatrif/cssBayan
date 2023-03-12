@@ -172,6 +172,11 @@ input[type=radio]:not(:checked) ~ label .bayan__svg {
     transition: all 0.7s linear;
   }
 
+  .bayan__item:active input[type=radio]:not(:checked) ~ label {
+    opacity:0.5;
+    transition: all 0.7s linear;
+  }
+
   .bayan__item:hover input[type=radio]:not(:checked) ~ label .bayan__svg {
     transform: rotate(45deg);
     transition: all 0.7s linear;
